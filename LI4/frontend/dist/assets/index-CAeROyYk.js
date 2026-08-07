@@ -1,0 +1,1 @@
+import{x as r,s as t}from"./index-BfxmCC4D.js";const e=r({clientes:[],ordensServico:[],pecas:[],faturas:[],utilizadores:[]});function i(){return{clientes:t(()=>e.clientes),ordensServico:t(()=>e.ordensServico),pecas:t(()=>e.pecas),faturas:t(()=>e.faturas),utilizadores:t(()=>e.utilizadores)}}function c(s,o){e[s]=o}function n(s){return e[s]}export{n as g,c as s,i as u};

@@ -1,0 +1,31 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: scooterfix_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: scooterfix
+      MYSQL_USER: api_user
+      MYSQL_PASSWORD: api123
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./scripts/sql/creation_script.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./scripts/sql/scripts.sql:/docker-entrypoint-initdb.d/02_seed.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "api_user", "-papi123"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: scooterfix_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+volumes:
+  db_data:

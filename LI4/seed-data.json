@@ -1,0 +1,280 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Ana Ferreira",
+      "email": "ana.ferreira@email.pt",
+      "telefone": "912345678",
+      "morada": "Rua das Flores, 123, Lisboa",
+      "nif": "123456789",
+      "desde": "15/01/2023",
+      "equipamentos": 1,
+      "totalGasto": 450.0
+    },
+    {
+      "id": 2,
+      "nome": "Carlos Mendes",
+      "email": "carlos.mendes@email.pt",
+      "telefone": "923456789",
+      "morada": "Av. da Liberdade, 45, Porto",
+      "nif": "234567899",
+      "desde": "22/03/2023",
+      "equipamentos": 1,
+      "totalGasto": 680.5
+    },
+    {
+      "id": 3,
+      "nome": "Sofia Rodrigues",
+      "email": "sofia.rodrigues@email.pt",
+      "telefone": "934567890",
+      "morada": "Praça do Comércio, 78, Coimbra",
+      "nif": "345678907",
+      "desde": "10/05/2023",
+      "equipamentos": 1,
+      "totalGasto": 290.0
+    },
+    {
+      "id": 4,
+      "nome": "Miguel Alves",
+      "email": "miguel.alves@email.pt",
+      "telefone": "945678901",
+      "morada": "Rua do Ouro, 234, Lisboa",
+      "nif": "956789013",
+      "desde": "08/07/2023",
+      "equipamentos": 1,
+      "totalGasto": 1200.0
+    },
+    {
+      "id": 5,
+      "nome": "Beatriz Lima",
+      "email": "beatriz.lima@email.pt",
+      "telefone": "956789012",
+      "morada": "Av. Boavista, 567, Porto",
+      "nif": "567890120",
+      "desde": "20/01/2024",
+      "equipamentos": 1,
+      "totalGasto": 150.0
+    }
+  ],
+  "equipamentos": [
+    {
+      "id": 1,
+      "marca": "Xiaomi",
+      "modelo": "Mi Scooter Pro 2",
+      "tipo": "Elétrica",
+      "serie": "XM2023001",
+      "estado": "Funcional",
+      "clienteId": 1,
+      "registado": "15/01/2023",
+      "ultimaManutencao": "16/02/2024"
+    },
+    {
+      "id": 2,
+      "marca": "Segway",
+      "modelo": "Ninebot Max G30",
+      "tipo": "Elétrica",
+      "serie": "SG2023045",
+      "estado": "Em Reparação",
+      "clienteId": 2,
+      "registado": "22/03/2023",
+      "ultimaManutencao": "15/03/2024"
+    },
+    {
+      "id": 3,
+      "marca": "Razor",
+      "modelo": "A5 Lux",
+      "tipo": "Manual",
+      "serie": "RZ2023089",
+      "estado": "Funcional",
+      "clienteId": 3,
+      "registado": "10/05/2023",
+      "ultimaManutencao": null
+    },
+    {
+      "id": 4,
+      "marca": "Ninebot",
+      "modelo": "KickScooter E22E",
+      "tipo": "Elétrica",
+      "serie": "NB2023123",
+      "estado": "Em Reparação",
+      "clienteId": 4,
+      "registado": "06/07/2023",
+      "ultimaManutencao": "20/03/2024"
+    },
+    {
+      "id": 5,
+      "marca": "Kugoo",
+      "modelo": "S1 Pro",
+      "tipo": "Dobrável",
+      "serie": "KG2024001",
+      "estado": "Avariado",
+      "clienteId": 5,
+      "registado": "20/01/2024",
+      "ultimaManutencao": null
+    }
+  ],
+  "ordensServico": [
+    {
+      "id": 1,
+      "titulo": "Substituição de bateria",
+      "estado": "Em Reparação",
+      "prioridade": "Alta",
+      "descricao": "Bateria não carrega completamente",
+      "diagnostico": {
+        "descricao": "Células da bateria danificadas por humidade.",
+        "tempo_estimado": 2,
+        "data_diagnostico": "16/03/2024",
+        "pecas": [],
+        "custo": 100
+      },
+      "intervencoes": [
+        {
+          "id": 101,
+          "descricao": "Abertura do deck e limpeza de contactos",
+          "tempo": 45,
+          "data": "17/03/2024",
+          "tecnico": "Maria Santos",
+          "pecas": []
+        }
+      ]
+    }
+  ],
+  "pecas": [
+    {
+      "id": 1,
+      "nome": "Bateria 36V 10Ah",
+      "codigo": "BAT-36-10",
+      "descricao": "Bateria de lítio compatível com modelos Xiaomi",
+      "categoria": "Eletrónica",
+      "fornecedor": "TechParts Ltd",
+      "precoUnitario": 180.0,
+      "stockDisponivel": 8,
+      "stockMinimo": 3,
+      "stockTotal": 9,
+      "estado": "OK"
+    },
+    {
+      "id": 2,
+      "nome": "Cabo de Travão Universal",
+      "codigo": "TRV-CABO-01",
+      "descricao": "Cabo de travão ajustável 120cm",
+      "categoria": "Travões",
+      "fornecedor": "TechParts Ltd",
+      "precoUnitario": 12.5,
+      "stockDisponivel": 2,
+      "stockMinimo": 5,
+      "stockTotal": 15,
+      "estado": "Crítico"
+    },
+    {
+      "id": 3,
+      "nome": "Roda 8.5\" Pneu Sólido",
+      "codigo": "ROD-85-SOL",
+      "descricao": "Roda 8.5 polegadas com pneu anti-furo",
+      "categoria": "Rodas",
+      "fornecedor": "WheelMaster",
+      "precoUnitario": 35.0,
+      "stockDisponivel": 12,
+      "stockMinimo": 5,
+      "stockTotal": 18,
+      "estado": "OK"
+    },
+    {
+      "id": 4,
+      "nome": "Controlador de Velocidade",
+      "codigo": "CTRL-36V",
+      "descricao": "Controlador para motores 36V 250W-350W",
+      "categoria": "Eletrónica",
+      "fornecedor": "TechParts Ltd",
+      "precoUnitario": 45.0,
+      "stockDisponivel": 4,
+      "stockMinimo": 2,
+      "stockTotal": 6,
+      "estado": "Baixo"
+    },
+    {
+      "id": 5,
+      "nome": "Display LCD",
+      "codigo": "DISP-LCD-01",
+      "descricao": "Display digital com indicador de bateria",
+      "categoria": "Eletrónica",
+      "fornecedor": "TechParts Ltd",
+      "precoUnitario": 28.0,
+      "stockDisponivel": 1,
+      "stockMinimo": 3,
+      "stockTotal": 9,
+      "estado": "Crítico"
+    },
+    {
+      "id": 6,
+      "nome": "Pneu Dianteiro 10\"",
+      "codigo": "PNE-10-DI",
+      "descricao": "Pneu de ar 10 polegadas, compatível com vários modelos",
+      "categoria": "Rodas",
+      "fornecedor": "WheelMaster",
+      "precoUnitario": 22.0,
+      "stockDisponivel": 6,
+      "stockMinimo": 3,
+      "stockTotal": 8,
+      "estado": "OK"
+    }
+  ],
+  "faturas": [
+    {
+      "id": 1,
+      "numero": "FT2024/001",
+      "clienteId": 1,
+      "ordemId": 1,
+      "emissao": "10/02/2024",
+      "vencimento": "10/03/2024",
+      "estado": "Paga",
+      "subtotal": 45.0,
+      "iva": 10.35,
+      "total": 55.35,
+      "itens": [
+        {
+          "descricao": "Manutenção preventiva",
+          "qty": 1,
+          "preco": 45.0,
+          "total": 45.0,
+          "pecaId": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "numero": "FT2024/002",
+      "clienteId": 2,
+      "ordemId": 1,
+      "emissao": "15/03/2024",
+      "vencimento": "15/04/2024",
+      "estado": "Emitida",
+      "subtotal": 280.0,
+      "iva": 64.4,
+      "total": 344.4,
+      "itens": [
+        {
+          "descricao": "Substituição de bateria - peças",
+          "qty": 1,
+          "preco": 180.0,
+          "total": 180.0,
+          "pecaId": 2
+        },
+        {
+          "descricao": "Mão de obra",
+          "qty": 2,
+          "preco": 50.0,
+          "total": 100.0
+        }
+      ]
+    }
+  ],
+  "receitaMensal": [
+    { "mes": "Out", "valor": 2100 },
+    { "mes": "Nov", "valor": 3200 },
+    { "mes": "Dez", "valor": 2800 },
+    { "mes": "Jan", "valor": 3600 },
+    { "mes": "Fev", "valor": 4100 },
+    { "mes": "Mar", "valor": 4250 }
+  ]
+}
